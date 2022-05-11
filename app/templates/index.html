@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Web-App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Mina&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="../static/new_style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="app">
+            <h1>Todo List</h1>
+            <!-- Add a new Todo Item: -->
+            <form action="{{ url_for('add') }}" method="POST">
+                <input type="text" name="todoitem" id="todoItemInput" placeholder="Enter To-Do Task">
+                <input type="submit" value="&plus;" class="todoButton">
+            </form>
+
+            <div>
+                <ul id="incompleteList">
+                    {% for item in incompleteTask %}
+                    <li class="incompleteListItem">{{ item.text }} <a href="{{ url_for('complete',id=item.id) }}"
+                            class="link" id="markLink">&#10004; </a></li>
+                    {% endfor %}
+                </ul>
+                <ul id="completeList">
+                    {% for item in completeTask %}
+                    <li class="completeListItem">{{ item.text }} <a href="{{ url_for('delete' , id=item.id) }}"
+                            class="link" id="deleteLink"><i class="fa fa-trash"></i></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy Mohit Sood</p>
+        </div>
+    </div>
+</body>
+
+</html>

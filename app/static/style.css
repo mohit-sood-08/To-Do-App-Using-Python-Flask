@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    background: linear-gradient(to top, #09080e, #0f0c19, #130f23, #15112c, #181336);
+    color: white;
+    /* text color */
+    height:100vh;
+}
+
+h1 {
+    /* border: 2px solid red; */
+    text-align: center;
+    /* font-family: 'Rubik Puddles', cursive; */
+    font-family: 'Mina', sans-serif;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.250rem;
+    text-decoration-color: red;
+    font-size: 5rem;
+}
+
+form {
+    /* border: 2px solid red; */
+    /* padding:2rem 3rem; */
+    text-align: center;
+    margin:0.625rem 0 0.625rem 0;
+}
+
+#todoItemInput {
+    width: 60%;
+    margin-right: 0;
+    border-radius: 1.250rem 0 0 1.250rem;
+    font-size: 2rem;
+}
+
+.todoButton {
+    width: 20%;
+    margin-left: 0;
+    border-radius: 0 1.250rem 1.250rem 0;
+    font-size: 2rem;
+}
+
+ul {
+    /* border:1px solid red; */
+    list-style-type: none;
+}
+
+li {
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    position:relative;
+}
+
+.link {
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 0.0625rem solid white;
+    border-radius: 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+    float: right;
+}
+
+
+.link:visited {
+    color: white;
+}
+
+.link:active {
+    color: white;
+}
+
+.link:link {
+    color: white;
+}
+
+#markLink {
+    color: green;
+    /* background:white; */
+    border: 0.0625rem solid green;
+}
+#markLink:hover {
+    background-color: green;
+    color: white;
+    border: 0;
+}
+
+#deleteLink{
+    color:red;
+    border: 0.0625rem solid red;
+}
+
+#deleteLink:hover{
+    color:white;
+    background:red;
+    border:0;
+}
+
+#completeList > li{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 0.125rem;
+}

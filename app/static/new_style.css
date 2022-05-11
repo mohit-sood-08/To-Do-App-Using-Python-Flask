@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #e1e3ea;
+    height:100vh;
+    font-family: sans-serif;
+}
+
+.app{
+    width:60%;
+}
+
+@media (max-width:768px){
+    .app{
+        width:90%;
+    }
+}
+
+
+.app h1{
+    color:white;
+    background-color: #de3f53;
+    font-size: 2.5rem; /* 40px */
+    padding: 0.625rem 0; /* 10px */
+    text-align:center;
+    border-radius: 0.5rem 0.5rem 0 0; /* 8px */
+    font-family: 'Rajdhani',sans-serif;
+}
+
+.app form{
+    display:flex;
+    width:100%;
+    background-color: #262e4c;
+}
+
+.app #todoItemInput{
+    border:none;
+    background-color: #3c4979;
+    font-size: 1.125rem; /* 18px */
+    color:white;
+    padding:0.625rem; /* 10px */
+    width: 90%;
+}
+
+.app form .todoButton{
+    border:none;
+    color:white;
+    background-color: #1dd2af;
+    font-size:1.5625rem; /* 25px */
+    font-weight: 600;
+    height: 2.625rem;
+    width:10%;
+}
+
+.app ul{
+    list-style-type:none;
+    color:white;
+    padding:0;
+}
+
+.app ul li{
+    padding:0.625rem;
+    background-color: #262e4c;
+    border-bottom:0.0625rem solid #3a4674;
+}
+
+
+.app #completeList li{
+    color:rgba(192,192,192,0.8);
+    text-decoration: line-through;
+    
+}
+
+.app .link{
+    cursor: pointer;
+    color:green;
+    text-decoration: none;
+    background-color:#e0e0e0;
+    padding:0.625rem;
+    float:right;
+    margin-top:-0.625rem;
+}
+
+
+#markLink{
+    background: none;
+    color:white;
+}
+
+#markLink:hover{
+    color:rgb(25, 255, 25);
+}
+
+#deleteLink{
+    background:none;
+    color:white;
+}
+
+#deleteLink:hover{
+color:rgb(255,82,82);
+}
+
+#footer{
+    position:absolute;
+    bottom: 0.625px;
+}
